@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta>
+	<link rel="stylesheet" type="text/css" 		href="name_of_file.css">
+</head>
+<body>
+	The main content for the webpage goes here
+	etc. etc...
+</body>
+</html>
