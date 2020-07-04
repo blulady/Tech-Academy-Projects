@@ -1,0 +1,4 @@
+file name is incorrect 
+code is misprinted
+missing a closing tag
+tags are not in the correct format

@@ -1,0 +1,22 @@
+
+function csV3V5Init1279814410() {
+    var c = document.getElementById('pgevoke-story-0-csinlinepoll');
+    c.dataset.civicscienceWidget = '2978';
+
+    var m = document.createElement('meta');
+    m.setAttribute('name','civicscience:jspoll-hostname')
+    m.setAttribute('content','www.civicscience.com')
+    document.head.appendChild(m);
+
+    var s = document.createElement('script');
+    s.setAttribute('src','https://www.civicscience.com/jspoll/5/csw-polyfills.js');
+    document.head.appendChild(s);
+}
+
+//we must make sure the DOM is ready for us to read
+var csReadyStateCheckInterval1279814410 = setInterval(function() {
+    if (document.readyState === "interactive" || document.readyState === "complete") {
+        clearInterval(csReadyStateCheckInterval1279814410);
+        csV3V5Init1279814410();
+    }
+}, 100);

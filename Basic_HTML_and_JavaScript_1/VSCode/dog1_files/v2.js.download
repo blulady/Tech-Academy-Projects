@@ -1,0 +1,149 @@
+//Start
+if (!init) {
+  addJquery(apTableWidgetResize);
+}
+
+function addJquery(callback) {
+  //Add jQuery if is not already loaded
+  if (!window.jQuery) {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js";
+    document.getElementsByTagName("head")[0].appendChild(script);
+    script.onload = callback;
+  }
+  else {
+    callback;
+  }
+}
+function apTableWidgetResize() {
+  if (window.jQuery) {
+    jQuery('.ap-widgets-v2').each(function() {
+      var vertical = jQuery(this).attr('vertical');
+      jQuery('.widget-ap-' + vertical).each(function () {
+        var elementId = jQuery(this).attr('id');
+        if (elementId == "ap-table-widget-005") {
+          return;
+        }
+        var apTableWidget = document.getElementById(elementId);
+        var apTableWidth = document.getElementById(elementId).parentNode.offsetWidth;  //for borders from both sides;
+        responsiveAction(apTableWidth, apTableWidget);
+      });
+    });
+  } else {
+    addJquery(apTableWidgetResize);
+  }
+}
+
+var responsiveAction = function (apTableWidth, apTableWidget) {
+//  Add Classes
+  if (apTableWidth < 1121) {
+    jQuery(apTableWidget).addClass('apwidget1120');
+  }
+  if (apTableWidth < 1025) {
+    jQuery(apTableWidget).addClass('apwidget1024');
+  }
+  if (apTableWidth < 986) {
+    jQuery(apTableWidget).addClass('apwidget985');
+  }
+  if (apTableWidth < 961) {
+    jQuery(apTableWidget).addClass('apwidget960');
+  }
+  if (apTableWidth < 936) {
+    jQuery(apTableWidget).addClass('apwidget935');
+  }
+  if (apTableWidth < 901) {
+    jQuery(apTableWidget).addClass('apwidget900');
+  }
+  if (apTableWidth < 861) {
+    jQuery(apTableWidget).addClass('apwidget860');
+  }
+  if (apTableWidth < 836) {
+    jQuery(apTableWidget).addClass('apwidget835');
+  }
+  if (apTableWidth < 781) {
+    jQuery(apTableWidget).addClass('apwidget780');
+  }
+  if (apTableWidth < 711) {
+    jQuery(apTableWidget).addClass('apwidget710');
+  }
+  if (apTableWidth < 681) {
+    jQuery(apTableWidget).addClass('apwidget680');
+  }
+  if (apTableWidth < 640) {
+    jQuery(apTableWidget).addClass('apwidget639');
+  }
+  if (apTableWidth < 631) {
+    jQuery(apTableWidget).addClass('apwidget630');
+  }
+  if (apTableWidth < 581) {
+    jQuery(apTableWidget).addClass('apwidget580');
+  }
+  if (apTableWidth < 481) {
+    jQuery(apTableWidget).addClass('apwidget480');
+  }
+  if (apTableWidth < 361) {
+    jQuery(apTableWidget).addClass('apwidget360');
+  }
+//  Remove Classes
+  if (apTableWidth > 1120) {
+    jQuery(apTableWidget).removeClass('apwidget1120');
+    jQuery(apTableWidget).addClass('apwidget1120');
+  }
+  if (apTableWidth > 1024) {
+    jQuery(apTableWidget).removeClass('apwidget1024');
+  }
+  if (apTableWidth > 985) {
+    jQuery(apTableWidget).removeClass('apwidget985');
+  }
+  if (apTableWidth > 960) {
+    jQuery(apTableWidget).removeClass('apwidget960');
+  }
+  if (apTableWidth > 935) {
+    jQuery(apTableWidget).removeClass('apwidget935');
+  }
+  if (apTableWidth > 900) {
+    jQuery(apTableWidget).removeClass('apwidget900');
+  }
+  if (apTableWidth > 860) {
+    jQuery(apTableWidget).removeClass('apwidget860');
+  }
+  if (apTableWidth > 835) {
+    jQuery(apTableWidget).removeClass('apwidget835');
+  }
+  if (apTableWidth > 780) {
+    jQuery(apTableWidget).removeClass('apwidget780');
+  }
+  if (apTableWidth > 710) {
+    jQuery(apTableWidget).removeClass('apwidget710');
+  }
+  if (apTableWidth > 680) {
+    jQuery(apTableWidget).removeClass('apwidget680');
+  }
+  if (apTableWidth > 639) {
+    jQuery(apTableWidget).removeClass('apwidget639');
+  }
+  if (apTableWidth > 630) {
+    jQuery(apTableWidget).removeClass('apwidget630');
+  }
+  if (apTableWidth > 580) {
+    jQuery(apTableWidget).removeClass('apwidget580');
+  }
+  if (apTableWidth > 480) {
+    jQuery(apTableWidget).removeClass('apwidget480');
+  }
+  if (apTableWidth > 360) {
+    jQuery(apTableWidget).removeClass('apwidget360');
+  }
+
+};
+
+window.onresize = function () {
+  apTableWidgetResize();
+}
+
+var init = true;
+// Ready fucntion to make sure tablerefresh calls itself
+jQuery(document).ready(function () {
+  apTableWidgetResize();
+});

@@ -1,0 +1,9 @@
+Hypertext Reference
+Implicit vs Explicit
+Implicit
+<a href="yourfilename.html">Link Title</a>
+links to your document
+
+Explicit
+<a href="https://learncodinganywhere.com/"> Link Title</a>
+links to a webpage

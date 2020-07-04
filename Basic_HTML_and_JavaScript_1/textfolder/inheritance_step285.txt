@@ -1,0 +1,9 @@
+Inheritance:
+when a program allows for (child)classes to inherit the structure and behavior of another class(parent) while allowing for new properties and behaviors
+ie a vehicle class has the child class of an airplane 
+adding properties like;
+	number of wings to provide lift
+	number of engines
+and behaviors like;
+	take off 
+	land

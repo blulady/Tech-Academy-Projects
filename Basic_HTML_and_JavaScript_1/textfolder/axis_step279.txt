@@ -1,0 +1,4 @@
+Axis:
+coordinates are a set of two numbers that locate a point on a grid or a chart ie longitude/latitude.
+x axis is horizontal (horizen) flat
+y Aaxis is vertical (up and down)

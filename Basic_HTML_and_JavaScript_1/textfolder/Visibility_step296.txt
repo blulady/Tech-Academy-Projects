@@ -1,0 +1,5 @@
+Visibility 
+CSS visibility property specifies wheather or not an element is visible 
+Values for the visibility property:
+hidden
+visible

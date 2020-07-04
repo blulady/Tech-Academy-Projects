@@ -1,0 +1,9 @@
+Array: 
+collection of data/elements arranged in rows/colums
+usually stored in sequence
+Index:
+the word for a position of an element in a sequence 
+starts with 0
+
+Therefore each element has two properties: index&value
+

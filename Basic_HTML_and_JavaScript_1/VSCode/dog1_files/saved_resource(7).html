@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<!-- saved from url=(0110)https://33cbdde7338bb51a4c8d-15d7b150d1867bc3d48f6d06043ea12e.ssl.cf2.rackcdn.com/poll/?benn_siteid=pg-article -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<style type="text/css"> 
+	body {
+		margin:0;
+		font-family:Helvetica,Arial,sans-serif;
+	}
+	html {
+		overflow:hidden;
+	}
+	div.civicscience.ballotbox {
+		margin: 0;
+	}
+	div#cspoll {
+		margin-bottom:20px;
+	}
+	div.adnotice {
+		text-align:center;
+		text-transform:uppercase;
+		color:#999;
+		font-size:9.6px;
+		max-width:300px;
+	}
+	div#outerwrapper {
+		padding-bottom:10px;
+		/* creates a little space after ad. Sometimes the next element in tpl file
+		has no top margin (e.g., in stories.tpl, currently), other times it does */
+		min-height: 150px;
+	}
+	.clear {
+		clear:both;
+	}
+	.adnotice {
+		display:none;
+	}
+</style>
+
+<!-- <script src="http://widget.post-gazette.com/js/jquery/jquery-2.1.3.min.js"></script> -->
+<script async="" src="./analytics.js(1).download"></script><script src="./jquery-2.1.3.min.js.download"></script>
+
+<!--jQuery plugin to get query string values -->
+<script type="text/javascript">
+(function ($) {
+	$.querystring = (function (a) {
+		var i, p, b = {};
+		if (a === "") { return {}; }
+		for (i = 0; i < a.length; i += 1) {
+			p = a[i].split('=');
+			if (p.length === 2) {
+				b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+			}
+		}
+	return b;
+	}
+	(window.location.search.substr(1).split('&')));
+}
+(jQuery));
+</script>
+
+<!-- Pubmatic API -->
+<script type="text/javascript">
+var pm_optimize_adslots = ['BENN_300x250_BTF@300x250'];
+var pm_pub_id = 81028;
+var my_parent_window = document.referrer;
+if (my_parent_window !== "") {
+    var kadpageurl = encodeURIComponent(my_parent_window);
+}
+// var pm_custom
+</script>
+<!--
+<script type="text/javascript" src=" https://ads.pubmatic.com/AdServer/js/gshowad.js">
+</script>
+-->
+
+<!-- Rubicon -->
+<!-- Disabling 2/9/2017 to try to prevent error message -AF
+<script type="text/javascript">
+	oz_api = 'valuation';
+	oz_site = '11604/35280';
+	oz_zone = '168654';
+	oz_ad_slot_size = '300x250';
+</script>
+<script type='text/javascript' src='http://tap-cdn.rubiconproject.com/partner/scripts/rubicon/dorothy.js?pc=11604/35280'></script>
+-->
+
+<!-- OpenX -->
+<!-- *** Outdated script, removing Oct 6, 2017 per Brian -AF
+<script src="//ox-d.pittpostgazette.servedbyopenx.com/w/1.0/jstag?nc=6785150-PostGazette"></script>
+-->
+
+<!-- GPT -->
+<script type="text/javascript">
+(function() {
+var useSSL = 'https:' == document.location.protocol;
+var src = (useSSL ? 'https:' : 'http:') +
+'//www.googletagservices.com/tag/js/gpt.js';
+document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+})();
+</script><script src="./gpt.js.download"></script><script src="./pubads_impl_2020062201.js.download" id="gpt-impl-0.914547992006661" nonce=""></script><link rel="preload" href="./f(4).txt" as="script"><script src="./f(4).txt"></script><script>processGoogleTokenSync({"newToken":"FBS"},5);</script>
+
+<!--Google Analytics-->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-15716261-24', 'auto');
+// ga('send', 'pageview'); // We don't want to register a page view
+</script>
+
+<script type="text/javascript">
+
+var widgetloadeventalreadyregistered = false;
+var alreadyfired = false;
+var siteid;
+var jsondata;
+var siteentry;
+var csid;
+var adpath;
+var benn_noadrefresh;
+
+function isset(x) {
+	return (typeof x == "undefined" ? false : true);
+}
+
+function initializeWidget() {
+
+	siteid = $.querystring['benn_siteid'];
+	if (siteid == "") { return; } // If no site id, fail.
+
+	benn_noadrefresh = $.querystring['benn_noadrefresh'];
+	
+	jsondata = {
+		"pg-frontpage":{
+			"csid": "tgtid=50f26d34-00fa-11e2-bb87-12313809f6d1",
+			"adpath": ""
+		},
+		"pg-section":{
+			"csid": "tgtid=50f26e38-00fa-11e2-bb87-12313809f6d1",
+			"adpath": ""
+		},
+		"pg-section-ae":{
+			"csid": "tgtid=50f26f6e-00fa-11e2-bb87-12313809f6d1",
+			"adpath": ""
+		},
+		"pg-article":{
+			"csid": "tgtid=50f26e38-00fa-11e2-bb87-12313809f6d1",
+			"adpath": ""
+		},
+		"pg-mobile-frontpage":{
+			"csid":"tgtid=f18041d3-c7d5-1514-f9bb-09fdc9833e51",
+			"adpath":""
+		},
+		"pg-mobile-section":{
+			"csid":"tgtid=f18041d3-c7d5-1514-f9bb-09fdc9833e51",
+			"adpath":""
+		},
+		"pg-mobile-section-sports":{
+			"csid":"tgtid=e74c9d04-b193-4dd4-ddfc-66ccfcf569a0",
+			"adpath":""
+		},
+		"pg-mobile-article":{
+			"csid":"tgtid=f18041d3-c7d5-1514-f9bb-09fdc9833e51",
+			"adpath":""
+		},
+		"pg-mobile-article-sports":{
+			"csid":"tgtid=e74c9d04-b193-4dd4-ddfc-66ccfcf569a0",
+			"adpath":""
+		},
+		"toledoblade":{
+			"csid": "tgtid=50f3d642-00fa-11e2-bb87-12313809f6d1",
+			"adpath": ""
+		},
+		"herald-citizen": {
+			"sitename": "Herald-Citizen",
+			"publisher": "Walls",
+			"siteurl": "herald-citizen.com",
+			"csid": "tgtid=e5d31e86-3a1b-1374-bdf5-3eaaff5ebe3f",
+			"adpath": "\/6785150\/BENN\/WallsPublishing\/Herald_Citizen\/SC",
+			"csidold": "tgtid=f4a8a265-6600-f3a4-9175-cb3fdcb0694e",
+			"adpathold": "\/6785150\/pg.com\/civicscience\/home"
+		},
+		"laconiadailysun": {
+			"sitename": "Lakonia Daily Sun",
+			"publisher": "Country Club News",
+			"siteurl": "laconiadailysun.com",
+			"csid": "tgt=559",
+			"adpath": "\/6785150\/BENN\/Country_Club_News\/www.laconiadailysun.com\/SC"
+		},
+		"mountaineagle": {
+			"sitename": "Daily Mountain Eagle",
+			"publisher": "Walls",
+			"siteurl": "mountaineagle.com",
+			"csid": "tgtid=699bd879-0aed-10d4-d5d6-2504c2c27860",
+			"adpath": "\/6785150\/BENN\/Daily_Mountain_Eagle\/SC"
+		},
+		"ionmesquite": {
+			"sitename": "Ion Mesquite",
+			"publisher": "Ion Mesquite",
+			"siteurl": "ionmesquite.com",
+			"csid": "tgt=1319",
+			"adpath": "\/6785150\/BENN\/Ion_Mesquite\/SC"
+		},
+		"thenews-gazette": {
+			"sitename": "The News-Gazette",
+			"publisher": "The News-Gazette",
+			"siteurl": "thenews-gazette.com",
+			"csid": "tgtid=b4efdf7e-d918-dd94-a990-4e35096a9791",
+			"adpath": "\/6785150\/BENN\/The_News_Gazette\/SC"
+		},
+		"sentinelmont": {
+			"sitename": "The Montogomery County Sentinal",
+			"publisher": "The Sentinel",
+			"siteurl": "thesentinal.com/mont/",
+			"csid": "tgtid=3915ed5b-81af-a4c4-39b2-8be005107db4",
+			"adpath": "\/6785150\/BENN\/The_Sentinel\/mont\/SC"
+		},
+		"sentinelpgs": {
+			"sitename": "The Prince George's Sentinel",
+			"publisher": "The Sentinel",
+			"siteurl": "thesentinal.com/pgs",
+			"csid": "tgtid=d15a26a8-65d0-9684-1dff-dbcc9e215587",
+			"adpath": "\/6785150\/BENN\/The_Sentinel\/pgs\/SC"
+		},
+		"kimballarea": {
+			"sitename": "Kimball Area News",
+			"publisher": "Tri-County News",
+			"siteurl": "kimballarea.com",
+			"csid": "tgt=1313",
+			"adpath": "\/6785150\/BENN\/Tri_County_News\/SC"
+		},
+		"tricountynewsmn": {
+			"sitename": "tricountynews.mn",
+			"publisher": "Tri-County News",
+			"siteurl": "tricountynews.mn",
+			"csid": "tgt=1313",
+			"adpath": "\/6785150\/BENN\/Tri_County_News\/SC"
+		},
+		"journal-leader": {
+			"sitename": "Journal Leader",
+			"publisher": "Journal Leader",
+			"siteurl": "journal-leader.com",
+			"csid": "tgtid=ffa11863-e497-a664-b51a-55c30544f401",
+			"adpath": "\/6785150\/BENN\/Journal_Leader\/SC"
+		},
+		"mocovox": {
+			"sitename": "MoCoVox",
+			"publisher": "Anthony St Productions",
+			"siteurl": "mocovox.com",
+			"csid": "tgt=1311",
+			"adpath": "\/6785150\/BENN\/AnthonyStProductions\/SC"
+		},
+		"ellicottvillenews": {
+			"sitename": "Ellicottville News",
+			"publisher": "Ellicottville News",
+			"siteurl": "ellicottvillenews.com",
+			"csid": "tgtid=e0b5196c-f871-1704-c17e-7b7a94efe804",
+			"adpath": "\/6785150\/BENN\/Ellicottville_News\/SC"
+		},
+		"wecoverthetowns": {
+			"sitename": "wecoverthetowns.com",
+			"publisher": "Newspaper Publishers",
+			"siteurl": "wecoverthetowns.com",
+			"csid": "tgt=1312",
+			"adpath": "\/6785150\/BENN\/Newspaper_Publishers\/SC"
+		},
+		"daily-tribune": {
+			"sitename": "Daily Tribune",
+			"publisher": "Walls",
+			"siteurl": "daily-tribune.com",
+			"csid": "tgtid=e51d822f-aa35-5054-3559-7d5f8cff5009",
+			"adpath": "\/6785150\/BENN\/Daily_Tribune_News\/SC"
+		},
+		"bolivarcom": {
+			"sitename": "The Bolivar Commercial",
+			"publisher": "Walls",
+			"siteurl": "bolivarcom.com",
+			"csid": "tgtid=fbcb5a65-6cd4-3044-cd7f-3355a63a9c8f",
+			"adpath": "\/6785150\/BENN\/BolivarCommercialHerald_Citizen\/SC"
+		},
+		"charlestongazette-home": {
+			"sitename": "The Charleston Gazette",
+			"publisher": "The Charleston Gazette",
+			"siteurl": "wvgazette.com",
+			"csid": "tgtid=a242ecf4-2c86-b084-f989-081a6aa261cf",
+			"adpath": "\/6785150\/BENN\/TheCharlestonGazette\/SC"
+		},
+		"charlestongazette-sports": {
+			"sitename": "The Charleston Gazette",
+			"publisher": "The Charleston Gazette",
+			"siteurl": "wvgazette.com",
+			"csid": "tgtid=63f13394-f50d-d064-09cb-44d42f635428",
+			"adpath": "\/6785150\/BENN\/TheCharlestonGazette\/SC"
+		},
+		"charlestongazette-business": {
+			"sitename": "The Charleston Gazette",
+			"publisher": "The Charleston Gazette",
+			"siteurl": "wvgazette.com",
+			"csid": "tgtid=39757e40-8073-8494-55fd-f0143280ce63",
+			"adpath": "\/6785150\/BENN\/TheCharlestonGazette\/SC"
+		},
+		"charlestongazette-articles": {
+			"sitename": "The Charleston Gazette",
+			"publisher": "The Charleston Gazette",
+			"siteurl": "wvgazette.com",
+			"csid": "tgtid=c66407ab-8afa-96f4-35a5-8f3d23b95fcb",
+			"adpath": "\/6785150\/BENN\/TheCharlestonGazette\/SC"
+		},
+		"wausharaargus-home": {
+			"sitename": "Waushara Argus",
+			"siteurl": "www.wausharaargus.com",
+			"csid": "tgtid=f5ee5c5b-456a-eec4-c544-a0cfa4285955",
+			"adpath": "\/6785150\/BENN\/WausharaArgus\/SC"
+		},
+		"wausharaargus-sports": {
+			"sitename": "Waushara Argus",
+			"siteurl": "www.wausharaargus.com/sports",
+			"csid": "tgtid=26239edd-9433-f3e4-917a-120ed133c346",
+			"adpath": "\/6785150\/BENN\/WausharaArgus\/SC"
+		},
+		"wausharaargus-news": {
+			"sitename": "Waushara Argus",
+			"siteurl": "www.wausharaargus.com/news",
+			"csid": "tgtid=1e66126d-ff15-0fd4-d5df-2f0bb78f3723",
+			"adpath": "\/6785150\/BENN\/WausharaArgus\/SC"
+		},
+		"wausharaargus-articles": {
+			"sitename": "Waushara Argus",
+			"siteurl": "www.wausharaargus.com",
+			"csid": "tgtid=11bd5136-7a17-9584-bdde-a2e713aa3c6b",
+			"adpath": "\/6785150\/BENN\/WausharaArgus\/SC"
+		},
+		"pressandjournal-home": {
+			"sitename": "Press and Journal",
+			"siteurl": "www.pressandjournal.com",
+			"csid": "tgtid=50f7ee1c-00fa-11e2-bb87-12313809f6d1",
+			"adpath": "\/6785150\/BENN\/Press_and_Journal\/SC"
+		},
+		"pressandjournal-articles": {
+			"sitename": "Press and Journal",
+			"siteurl": "www.pressandjournal.com",
+			"csid": "tgtid=50f2a54c-00fa-11e2-bb87-12313809f6d1",
+			"adpath": "\/6785150\/BENN\/Press_and_Journal\/SC"
+		},
+		"gantdaily-home": {
+			"sitename": "Gant Daily",
+			"siteurl": "www.gantdaily.com",
+			"csid": "tgtid=47507671-ccb2-7784-5db5-8f49b8d894e7",
+			"adpath": "\/6785150\/BENN\/Gant_Daily\/SC"
+		},
+		"gantdaily-sports": {
+			"sitename": "Gant Daily",
+			"siteurl": "www.gantdaily.com",
+			"csid": "tgtid=ef1719b0-4857-a374-b9a2-bfdf917a2a1c",
+			"adpath": "\/6785150\/BENN\/Gant_Daily\/SC"
+		},
+		"gantdaily-news": {
+			"sitename": "Gant Daily",
+			"siteurl": "www.gantdaily.com",
+			"csid": "tgtid=6285f422-d1fa-4354-2d21-74235d8e2c6f",
+			"adpath": "\/6785150\/BENN\/Gant_Daily\/SC"
+		},
+		"gantdaily-newsarticle": {
+			"sitename": "Gant Daily",
+			"siteurl": "www.gantdaily.com",
+			"csid": "tgtid=67fdb7aa-880d-e2d4-4582-0d92d201f1e5",
+			"adpath": "\/6785150\/BENN\/Gant_Daily\/SC"
+		},
+		"gantdaily-sportsarticle": {
+			"sitename": "Gant Daily",
+			"siteurl": "www.gantdaily.com",
+			"csid": "tgtid=260abb36-75d1-bc04-8d99-a0a5d03e1f13",
+			"adpath": "\/6785150\/BENN\/Gant_Daily\/SC"
+		},
+		"hardisonink": {
+			"sitename": "HardisonInk",
+			"siteurl": "www.hardisonink.com",
+			"csid": "tgtid=afea0b1b-3e2b-3114-f911-46893d1af6f0",
+			"adpath": "\/6785150\/BENN\/HardisonInk\/SC"
+		},
+		"pittsburghcatholic": {
+			"sitename": "Pittsburgh Catholic",
+			"siteurl": "pittsburghcatholic.org",
+			"csid": "tgtid=db005479-cec1-ff14-ad49-20e16973e191",
+			"adpath": "\/6785150\/BENN\/PittsburghCatholicPublishing\/SC"			
+		},
+		"belefontaineexaminer": {
+			"sitename":"Belefontaine Examiner",
+			"siteurl":"berlindailysun.com",
+			"csid":"tgt=1309",
+			"adpath":"\/6785150\/BENN\/Bellfontane\/SC"
+		},
+		"berlindailysun": {
+			"sitename":"Berlin Daily Sun",
+			"siteurl":"berlindailysun.com",
+			"csid":"tgtid=d3bd6905-9611-a654-ad81-2c1c88f4cadf",
+			"adpath":"\/6785150\/BENN\/Country_Club_News\/www.berlindailysun.com\/SC"
+		},
+		"herald-citizen-ent": {
+			"sitename":"Herald-Citizen",
+			"publisher":"Walls",
+			"siteurl":"herald-citizen.com/newsx/living/entertainment",
+			"csid":"tgtid=a9226ae0-e86f-9d84-7df2-8ab8d3d33363",
+			"adpath":"\/6785150\/BENN\/WallsPublishing\/Herald_Citizen\/SC"
+		},
+		"herald-citizen-news": {
+			"sitename":"Herald-Citizen",
+			"publisher":"Walls",
+			"siteurl":"herald-citizen.com/newsx",
+			"csid":"tgtid=1e8f4567-6c80-bf84-8168-71b479264771",
+			"adpath":"\/6785150\/BENN\/WallsPublishing\/Herald_Citizen\/SC"
+		},
+		"herald-citizen-sports": {
+			"sitename":"Herald-Citizen",
+			"publisher":"Walls",
+			"siteurl":"herald-citizen.com/sports",
+			"csid":"tgtid=5eee3334-a86c-d464-e135-b165d88ea1a4",
+			"adpath":"\/6785150\/BENN\/WallsPublishing\/Herald_Citizen\/SC"
+		},
+		"irvingrambler": {
+			"sitename":"Irving Rambler",
+			"siteurl":"irvingrambler.com",
+			"csid":"tgtid=50f7f60a-00fa-11e2-bb87-12313809f6d1",
+			"adpath":"\/6785150\/BENN\/Irving_Rambler\/SC"
+		},
+		"mountaineagle-ent": {
+			"sitename":"Daily Mountain Eagle",
+			"siteurl":"mountaineagle.com/lifestyles/entertainment",
+			"csid":"tgtid=a9cd0935-3df1-77c4-71c0-5c5aeebc1553",
+			"adpath":"\/6785150\/BENN\/Daily_Mountain_Eagle\/SC"
+		},
+		"mountaineagle-news": {
+			"sitename":"Daily Mountain Eagle",
+			"siteurl":"mountaineagle.com/newsx",
+			"csid":"tgtid=6ea0706a-f700-acb4-51c0-aacb6a46f58c",
+			"adpath":"\/6785150\/BENN\/Daily_Mountain_Eagle\/SC"
+		},
+		"mountaineagle-sports": {
+			"sitename":"Daily Mountain Eagle",
+			"siteurl":"mountaineagle.com/sports",
+			"csid":"tgtid=b3d07f97-ecc9-83f4-29f6-a4a92d5477d4",
+			"adpath":"\/6785150\/BENN\/Daily_Mountain_Eagle\/SC"
+		},
+		"sentinelmont-ent": {
+			"sitename": "The Montogomery County Sentinal",
+			"publisher": "The Sentinel",
+			"siteurl":"thesentinel.com/mont/",
+			"csid":"tgtid=f63ac284-28ca-2164-cd5b-e67cd4034564",
+			"adpath":"\/6785150\/BENN\/The_Sentinel\/mont\/SC"
+		},
+		"sentinelmont-news": {
+			"sitename": "The Montogomery County Sentinal",
+			"publisher": "The Sentinel",
+			"siteurl":"thesentinel.com/mont/",
+			"csid":"tgtid=14cbc914-d2c2-9204-8d76-e8b1ac3f24c5",
+			"adpath":"\/6785150\/BENN\/The_Sentinel\/mont\/SC"
+		},
+		"sentinelmont-sports": {
+			"sitename": "The Montogomery County Sentinal",
+			"publisher": "The Sentinel",
+			"siteurl":"thesentinel.com/mont/",
+			"csid":"tgtid=f393f961-46f8-4954-f5f7-a8923f6d9a64",
+			"adpath":"\/6785150\/BENN\/The_Sentinel\/mont\/SC"
+		},
+		"sentinelpgs-ent": {
+			"sitename":"The Prince George's Sentinel",
+			"siteurl":"thesentinel.com/pgs/",
+			"csid":"tgtid=5638be92-0fe4-10f4-3dcd-ac14619c770b",
+			"adpath":"\/6785150\/BENN\/The_Sentinel\/pgs\/SC"
+		},
+		"sentinelpgs-news": {
+			"sitename":"The Prince George's Sentinel",
+			"siteurl":"thesentinel.com/pgs/",
+			"csid":"tgtid=1fcac204-7851-73b4-013a-fad110358544",
+			"adpath":"\/6785150\/BENN\/The_Sentinel\/pgs\/SC"
+		},
+		"sentinelpgs-sports": {
+			"sitename":"The Prince George's Sentinel",
+			"siteurl":"thesentinel.com/pgs/",
+			"csid":"tgtid=1e6431dd-8fe2-e6f4-dd73-a122aed108b1",
+			"adpath":"\/6785150\/BENN\/The_Sentinel\/pgs\/SC"
+		},
+		"bolivarcom-home": {
+			"sitename":"Bolivar Commercial",
+			"siteurl":"bolivarcommercial.com",
+			"csid":"tgtid=fbcb5a65-6cd4-3044-cd7f-3355a63a9c8f",
+			"adpath":"\/6785150\/BENN\/WallsPublishing\/BolivarCommercial\/SC"
+		},
+		"bolivarcom-news": {
+			"sitename":"Bolivar Commercial",
+			"siteurl":"bolivarcommercial.com/newsx",
+			"csid":"tgtid=209c62de-1b14-9dd4-d5c6-065b71d6f74d",
+			"adpath":"\/6785150\/BENN\/WallsPublishing\/BolivarCommercial\/SC"
+		},
+		"bolivarcom-sports": {
+			"sitename":"Bolivar Commercial",
+			"siteurl":"bolivarcommercial.com/sports",
+			"csid":"tgtid=e7000a04-9615-7764-6db1-ce6cd198d8d2",
+			"adpath":"\/6785150\/BENN\/WallsPublishing\/BolivarCommercial\/SC"
+		},
+		"daily-tribune-ent": {
+			"sitename":"Daily Tribune",
+			"siteurl":"daily-tribune.com/lifestyles/entertainment",
+			"csid":"tgtid=e9ef3226-2aa9-dc14-c5a8-da95b0c44a9c",
+			"adpath":"\/6785150\/BENN\/Daily_Tribune_News\/SC"
+		},
+		"daily-tribune-news": {
+			"sitename":"Daily Tribune",
+			"siteurl":"daily-tribune.com/newsx",
+			"csid":"tgtid=41c190fe-0961-1f14-e1cf-9ce417b78fcd",
+			"adpath":"\/6785150\/BENN\/Daily_Tribune_News\/SC"
+		},
+		"daily-tribune-sports": {
+			"sitename":"Daily Tribune",
+			"siteurl":"daily-tribune.com/sports",
+			"csid":"tgtid=6a01016d-e781-3df4-3120-5f979545182c",
+			"adpath":"\/6785150\/BENN\/Daily_Tribune_News\/SC"
+		},
+		"sjvt-home": {
+			"sitename":"St. John Valley Times",
+			"siteurl":"",
+			"csid":"tgtid=08a050ff-f512-f8f4-d964-ced09b84aa45",
+			"adpath":"\/6785150\/BENN\/WallsPublishing\/StJohnValleyTimes\/SC"
+		},
+		"sjvt-ae": {
+			"sitename":"St. John Valley Times",
+			"siteurl":"",
+			"csid":"tgtid=5e16492c-30dc-2f14-012e-4d569c8ab477",
+			"adpath":"\/6785150\/BENN\/WallsPublishing\/StJohnValleyTimes\/SC"
+		},
+		"sjvt-news": {
+			"sitename":"St. John Valley Times",
+			"siteurl":"",
+			"csid":"tgtid=0d07375d-1f78-cd24-3d52-f6a72c149ba0",
+			"adpath":"\/6785150\/BENN\/WallsPublishing\/StJohnValleyTimes\/SC"
+		},
+		"sjvt-sports": {
+			"sitename":"St. John Valley Times",
+			"siteurl":"",
+			"csid":"tgtid=1f98163b-8d17-7ad4-1da9-f9fd34345b3d",
+			"adpath":"\/6785150\/BENN\/WallsPublishing\/StJohnValleyTimes\/SC"
+		},
+		"chatsworthtimes": {
+			"sitename":"Chatsworth Times",
+			"siteurl":"chatsworthtimes.com",
+			"csid":"tgtid=7eacc5b7-bfc6-8954-e58d-6723355924da",
+			"adpath":"\/6785150\/BENN\/WallsPublishing\/ChatsworthTimes\/SC"
+		},
+		"redhookstarrevue":{
+			"sitename":"Red Hook Star Revue",
+			"siteurl":"star-revue.com",
+			"csid":"tgtid=6edb8ce7-5a8c-4f14-ddc7-3ea9201373e5",
+			"adpath":"\/6785150\/BENN\/RedHookStarRevue\/SC"
+		},
+		"redhookstarrevue-articles":{
+			"sitename":"Red Hook Star Revue",
+			"siteurl":"star-revue.com",
+			"csid":"tgtid=6718967d-8bf5-4d34-ad8a-7690bd8060a4",
+			"adpath":"\/6785150\/BENN\/RedHookStarRevue\/SC"
+		},
+		"timesbulletin-home":{
+			"sitename":"Times Bulletin",
+			"siteurl":"timesbulletin.com",
+			"csid":"tgtid=405875b0-d0d1-b504-ed54-220cf76ed4af",
+			"adpath":"\/6785150\/BENN\/Times_Bulletin\/SC"
+		},
+		"timesbulletin-sports":{
+			"sitename":"Times Bulletin",
+			"siteurl":"timesbulletin.com",
+			"csid":"tgtid=fb718b55-2c6d-f334-ad0f-c4d3a6ffeb60",
+			"adpath":"\/6785150\/BENN\/Times_Bulletin\/SC"
+		},
+		"adaherald-home":{
+			"sitename":"Ada Herald",
+			"siteurl":"adaherald.com",
+			"csid":"tgtid=4f80a498-974a-5f34-ad81-892be5dc0d0b",
+			"adpath":"\/6785150\/BENN\/Ada_Herald\/SC"
+		},
+		"adaherald-sports":{
+			"sitename":"Ada Herald",
+			"siteurl":"adaherald.com",
+			"csid":"tgtid=b9690cf5-348f-6b94-3547-8a3e19bf8705",
+			"adpath":"\/6785150\/BENN\/Ada_Herald\/SC"
+		},
+		"putnamsentinel-home":{
+			"sitename":"Putnam County Sentinel",
+			"siteurl":"putnamsentinel.com",
+			"csid":"tgtid=4ccb8668-1562-4be4-19f2-22b81f77b97b",
+			"adpath":"\/6785150\/BENN\/PutnamCountySentinel\/SC"
+		},
+		"putnamsentinel-sports":{
+			"sitename":"Putnam County Sentinel",
+			"siteurl":"putnamsentinel.com",
+			"csid":"tgtid=484f0492-515a-c744-5996-ba093dd5fbaf",
+			"adpath":"\/6785150\/BENN\/PutnamCountySentinel\/SC"
+		},
+		"delphosherald-home":{
+			"sitename":"Delphos Daily Herald",
+			"siteurl":"delphosherald.com",
+			"csid":"tgtid=5c73078a-d3af-4d34-d571-8a465242bdc7",
+			"adpath":"\/6785150\/BENN\/Delphos_Daily\/SC"
+		},
+		"delphosherald-sports":{
+			"sitename":"Delphos Daily Herald",
+			"siteurl":"delphosherald.com",
+			"csid":"tgtid=9fa8babe-b9af-8e24-3986-9ad6af458bed",
+			"adpath":"\/6785150\/BENN\/Delphos_Daily\/SC"
+		},
+		"pauldingprogress-home":{
+			"sitename":"Paulding County Progress",
+			"siteurl":"progressnewspaper.org",
+			"csid":"tgtid=7178eae1-be83-c024-31c3-3b5c6ebc6bee",
+			"adpath":"\/6785150\/BENN\/Paulding_Press\/SC"
+		},
+		"pauldingprogress-sports":{
+			"sitename":"Paulding County Progress",
+			"siteurl":"progressnewspaper.org",
+			"csid":"tgtid=670baa7d-08e4-4e44-3181-d4702a50e3af",
+			"adpath":"\/6785150\/BENN\/Paulding_Press\/SC"
+		},
+		"blackstarnews-home":{
+			"sitename":"Black Star News",
+			"siteurl":"blackstarnews.com",
+			"csid":"tgtid=92f6e2c6-a07a-4b84-ad55-a201f473d588",
+			"adpath":"\/6785150\/BENN\/CivicScience\/blackstarnews"
+		},
+		"blackstarnews-news":{
+			"sitename":"Black Star News",
+			"siteurl":"blackstarnews.com",
+			"csid":"tgtid=13c12a3a-e9e5-2d74-95ee-68589a884278",
+			"adpath":"\/6785150\/BENN\/CivicScience\/blackstarnews"
+		},
+		"kalonanews-home":{
+			"sitename":"Kalona News",
+			"siteurl":"kalonanews.com",
+			"csid":"tgtid=43c07b76-e9a2-a414-41ee-bb8be48c005a",
+			"adpath":"\/6785150\/BENN\/CivicScience\/kalonanews"
+		},
+		"kalonanews-news":{
+			"sitename":"Kalona News",
+			"siteurl":"kalonanews.com",
+			"csid":"tgtid=46714b76-1650-f374-fd40-0195796ae565",
+			"adpath":"\/6785150\/BENN\/CivicScience\/kalonanews"
+		},
+		"conwaydailysun-home":{
+			"sitename":"Conway Daily Sun",
+			"siteurl":"conwaydailysun.com",
+			"csid":"tgtid=2adc0e22-bf51-af24-19dd-92205ce70b8d",
+			"adpath":"\/6785150\/BENN\/CivicScience\/conwaydaiysun"
+		},
+		"conwaydailysun-sports":{
+			"sitename":"Conway Daily Sun",
+			"siteurl":"conwaydailysun.com",
+			"csid":"tgtid=1424371c-175b-c9f4-7508-86f1df96b9c5",
+			"adpath":"\/6785150\/BENN\/CivicScience\/conwaydaiysun"
+		},
+		"portlandphoenix":{
+			"sitename":"Portland Phoenix",
+			"siteurl":"portlandphoenix.me",
+			"csid":"tgtid=d719f238-dd02-0ff4-398a-1e03b310f06d",
+			"adpath":"\/6785150\/BENN\/CivicScience\/portlandphoenix"
+		},
+		"wdtimes-home":{
+			"sitename":"Watertown Daily Times",
+			"siteurl":"wdtimes.com",
+			"csid":"tgtid=a1343c97-24ab-43d4-cd41-9900e88f5127",
+			"adpath":"\/6785150\/BENN\/CivicScience\/watertowndailytimes"
+		},
+		"wdtimes-local":{
+			"sitename":"Watertown Daily Times",
+			"siteurl":"wdtimes.com",
+			"csid":"tgtid=7d2ad708-6898-a534-851d-e2f3862df996",
+			"adpath":"\/6785150\/BENN\/CivicScience\/watertowndailytimes"
+		},
+		"wdtimes-sports":{
+			"sitename":"Watertown Daily Times",
+			"siteurl":"wdtimes.com",
+			"csid":"tgtid=343488cb-cf02-bdd4-99ff-2cafc3ade253",
+			"adpath":"\/6785150\/BENN\/CivicScience\/watertowndailytimes"
+		},
+		"bennsolutions-160":{
+			"sitename":"BENN Solutions",
+			"csid":"tgtid=d5b75dba-29f4-b9e4-d103-e5010c754c35",
+			"adpath":""
+		},
+		"bennsolutions-560":{
+			"sitename":"BENN Solutions",
+			"csid":"tgtid=c5de3d6a-3d02-5824-e1be-8f783674b7eb",
+			"adpath":""
+		},
+		"navigatorjournal":{
+			"sitename":"Navigator & Journal-Register",
+			"csid":"tgtid=5a367575-beb1-e754-cd89-9c9fb1d35bc7",
+			"adpath":""
+		},
+		"athensmessenger":{
+			"sitename":"Athens Messenger",
+			"csid":"tgtid=1073f934-d670-aea4-f5e6-ff74eb91bdef",
+			"adpath":""
+		},
+		"circlevilleherald":{
+			"sitename":"Circleville Herald",
+			"csid":"tgtid=a8498d5b-40a9-48f4-8977-83ee2afb290b",
+			"adpath":""
+		},
+		"logandailyherald":{
+			"sitename":"Logan Daily Herald",
+			"csid":"tgtid=1f66c52b-501f-f314-3565-7e994abefd66",
+			"adpath":""
+		},
+		"timesjournal":{
+			"sitename":"Times Journal",
+			"csid":"tgtid=b4c90b2f-b695-1634-218b-0d9f8d5da91e",
+			"adpath":""
+		},
+		"perrytribune":{
+			"sitename":"Perry Tribune",
+			"csid":"tgtid=6d626fd0-db20-f7d4-4dcf-ed48cb0a194e",
+			"adpath":""
+		},
+		"pikecountynewswatchman":{
+			"sitename":"Pike County News Watchman",
+			"csid":"tgtid=d91ea949-5510-cfc4-0d4a-0bafda1a0666",
+			"adpath":""
+		},
+		"vintoncourier":{
+			"sitename":"Vinton Courier",
+			"csid":"tgtid=bbb87b7f-bffe-a024-c167-4f9041d0d0f6",
+			"adpath":""
+		},
+		"athensnews":{
+			"sitename":"Athens News",
+			"csid":"tgtid=89e7ce48-20ce-d654-c9e7-d81b36c3e8a8",
+			"adpath":""
+		},
+		"crescentnews":{
+			"sitename":"Crescent News",
+			"csid":"tgtid=b7f6718e-2a01-4d04-b17c-2257127d0504",
+			"adpath":""
+		},
+		"themonroetimes":{
+			"sitename":"Monroe Times",
+			"csid":"tgtid=5a367575-beb1-e754-cd89-9c9fb1d35bc7",
+			"adpath":""
+		},
+		"gladwinmi":{
+			"sitename":"Gladwin County Record",
+			"csid":"tgtid=b17e1414-3614-48c4-6dd3-25e188b96f46",
+			"adpath":""
+		},
+		"hcnews":{
+			"sitename":"Hood County News",
+			"csid":"tgtid=3c4f90d0-c3b2-5044-cd9f-0c9d32e9a1a7",
+			"adpath":""
+		},
+		"chinohillschampion":{
+			"sitename":"Chino Hills Champion",
+			"csid":"tgtid=3012f356-7bec-1df4-1125-39f1a14f1ac6",
+			"adpath":""
+		},
+		"davisclipper":{
+			"sitename":"Davis Clipper",
+			"csid":"tgtid=9a7947a0-a705-3584-a52c-46bb73a4b594",
+			"adpath":""
+		},
+		"ironcountytoday":{
+			"sitename":"Iron County Today",
+			"csid":"tgtid=bb72ee34-054b-e0f4-a150-ed7c1e6a1a72",
+			"adpath":""
+		},
+		"wnypapers":{
+			"sitename":"Niagara Frontier Publications",
+			"csid":"tgtid=c127dcf4-8439-aaa4-692b-43d74a8e345d",
+			"adpath":""
+		},
+		"elpasoinc":{
+			"sitename":"El Paso Inc",
+			"csid":"tgtid=f247e6c6-6e49-5b14-0536-92f94686de89",
+			"adpath":""
+		},
+		"whatsuppub":{
+			"sitename":"What's Up",
+			"siteurl":"whatsuppub.com",
+			"csid":"tgtid=160a69a6-c693-8d44-5503-79386e66674c",
+			"adpath":""
+		},
+		"theblacksheartimes":{
+			"sitename":"The Blackshear Times",
+			"siteurl":"theblacksheartimes.com",
+			"csid":"tgtid=8c391f5a-bfb3-a064-f940-87153c3afd7e",
+			"adpath":""
+		},
+		"couriersentinelnews":{
+			"sitename":"Courier Sentinel",
+			"siteurl":"couriersentinelnews.com",
+			"csid":"tgtid=3ecd52bd-835d-2a94-f981-7d6f7926173b",
+			"adpath":""
+		},
+		"cwin-starnews":{
+			"sitename":"Star News",
+			"siteurl":"centralwinews.com/star-news",
+			"csid":"tgtid=014d0ff0-7f6e-7c44-e5bf-2852e2bad64f",
+			"adpath":""
+		},
+		"cwin-recordreview":{
+			"sitename":"Record Review",
+			"siteurl":"centralwinews.com/record-review",
+			"csid":"tgtid=71aa23ca-aacd-9dd4-dd7f-e8958cd43593",
+			"adpath":""
+		},
+		"cwin-tribunephonograph":{
+			"sitename":"Tribune Phonograph",
+			"siteurl":"centralwinews.com/tribune-phonograph",
+			"csid":"tgtid=a34df17d-104c-10f4-8d35-3e8cdaa94084",
+			"adpath":""
+		},
+		"cwin-tribunerecordgleaner":{
+			"sitename":"Tribune Record Gleaner",
+			"siteurl":"centralwinews.com/tribune-record-gleaner",
+			"csid":"tgtid=e9d97ff0-97c4-9514-8982-5a1f690651f1",
+			"adpath":""
+		},
+		"apgmn-faribault":{
+			"sitename":"Faribault Daily News",
+			"siteurl":"faribault.com",
+			"csid":"tgtid=0c7759d9-78a0-7864-c507-bd9420360eda",
+			"adpath":""
+		},
+		"apgmn-owatonna":{
+			"sitename":"Owatonna People's Press",
+			"siteurl":"owatonna.com",
+			"csid":"tgtid=b2912037-6d5b-d044-7d18-1e52daf3a8de",
+			"adpath":""
+		},
+		"apgmn-northfieldnews":{
+			"sitename":"Northfield News",
+			"siteurl":"northfieldnews.com",
+			"csid":"tgtid=27c61018-def2-fc64-a1b9-d4e42248946f",
+			"adpath":""
+		},
+		"apgmn-wasecacountynews":{
+			"sitename":"Waseca County News",
+			"siteurl":"wasecacountynews.com",
+			"csid":"tgtid=52f5340b-e122-05a4-ad22-74b92d31b80e",
+			"adpath":""
+		},
+		"apgmn-stpeterherald":{
+			"sitename":"St. Peter Herald",
+			"siteurl":"stpeterherald.com",
+			"csid":"tgtid=d0973d78-90e1-b854-913c-1f346dfed286",
+			"adpath":""
+		},
+		"tjournal":{
+			"sitename":"The Journal",
+			"siteurl":"tjournal.com",
+			"csid":"tgtid=ccc103a8-69c4-0104-c156-9b63df7106ba",
+			"adpath":""
+		},
+		"sdgnewsgroup":{
+			"sitename":"SDG Newsgroup",
+			"siteurl":"sdgnewsgroup.com",
+			"csid":"tgtid=62d6036d-fad8-5f04-8539-dcf106c1bf39",
+			"adpath":""
+		},
+		"troupcountynews":{
+			"sitename":"Troup County News",
+			"siteurl":"troupcountynews.net",
+			"csid":"tgtid=28b9c652-abb7-c2a4-b178-e12040d3d60d",
+			"adpath":""
+		},
+		"swnewsmedia":{
+			"sitename":"SW Newsmedia",
+			"siteurl":"swnewsmedia.com",
+			"csid":"tgtid=6666c787-8649-7924-4149-84e7326dccb7",
+			"adpath":""
+		},
+		"wooster-swnewsmedia":{
+			"sitename":"SW Newsmedia",
+			"siteurl":"swnewsmedia.com",
+			"csid":"tgtid=6666c787-8649-7924-4149-84e7326dccb7",
+			"adpath":""
+		},
+		"wooster-recordpub":{
+			"sitename":"Record-Courier",
+			"siteurl":"recordpub.com",
+			"csid":"tgtid=25dd8839-00f1-3604-991d-705ed4e1eec3",
+			"adpath":""
+		},
+		"wooster-fallsnewspress":{
+			"sitename":"Cuyahoga Falls News Press",
+			"siteurl":"fallsnewspress.com",
+			"csid":"tgtid=b3116aa0-b684-a844-8de5-146e38fd9ab7",
+			"adpath":""
+		},
+		"wooster-stowsentry":{
+			"sitename":"Stow Sentry",
+			"siteurl":"stowsentry.com",
+			"csid":"tgtid=0cc5c47b-b399-43f4-711e-20278652c755",
+			"adpath":""
+		},
+		"wooster-the-news-leader":{
+			"sitename":"Nordonia Hills News Leader",
+			"siteurl":"the-news-leader.com",
+			"csid":"tgtid=f726d37e-18f0-6514-1d39-10197ba61c42",
+			"adpath":""
+		},
+		"wooster-hudsonhu-btimes":{
+			"sitename":"Hudson Hub Times",
+			"siteurl":"hudsonhubtimes.com",
+			"csid":"tgtid=ebf0c090-49e1-ae94-79e6-5d375acc1c94",
+			"adpath":""
+		},
+		"wooster-twinsburgbulletin":{
+			"sitename":"Twinsburg Bulletin",
+			"siteurl":"twinsburgbulletin.com",
+			"csid":"tgtid=800e56c3-b392-1534-f1e8-c61ad7781273",
+			"adpath":""
+		},
+		"wooster-tallmadgeexpress":{
+			"sitename":"Tallmadge Express",
+			"siteurl":"tallmadgeexpress.com",
+			"csid":"tgtid=704217bd-0613-2744-05bb-c2ef02060c8e",
+			"adpath":""
+		},
+		"wooster-auroraadvocate":{
+			"sitename":"Aurora Advocate",
+			"siteurl":"auroraadvocate.com",
+			"csid":"tgtid=e9e9300a-863a-75e4-89a7-f753a42bf353",
+			"adpath":""
+		},
+		"wooster-goodtimesohio":{
+			"sitename":"Good Times in Ohio",
+			"siteurl":"goodtimesohio.com",
+			"csid":"tgtid=37ebb1c2-b6a0-a294-d918-321630dd7c5e",
+			"adpath":""
+		},
+		"wooster-the-daily-record":{
+			"sitename":"Daily Record",
+			"siteurl":"the-daily-record.com",
+			"csid":"tgtid=95433e75-5e97-0414-fd4e-70c4839d07b0",
+			"adpath":""
+		},
+		"wooster-holmescountyshopper":{
+			"sitename":"Holmes County Hub Shopper",
+			"siteurl":"holmescountyshopper.com",
+			"csid":"tgtid=02744e57-8163-6c94-919c-1cb85120d09a",
+			"adpath":""
+		},
+		"wooster-amish-heartland":{
+			"sitename":"Amish Heartland",
+			"siteurl":"amish-heartland.com",
+			"csid":"tgtid=7a3b57df-7e90-be54-c169-8d6169aac3bb",
+			"adpath":""
+		},
+		"wooster-the-review":{
+			"sitename":"The Review",
+			"siteurl":"the-review.com",
+			"csid":"tgtid=d90e5b0d-af1a-4fa4-85cb-7ed2ce817a7d",
+			"adpath":""
+		},
+		"wooster-tnl-news":{
+			"sitename":"News Leader",
+			"siteurl":"tnl-news.com",
+			"csid":"tgtid=647f7092-93e3-78e4-29d8-a1079eda6fa3",
+			"adpath":""
+		},
+		"wooster-the-press-news":{
+			"sitename":"Press News",
+			"siteurl":"the-press-news.com",
+			"csid":"tgtid=b52ece5d-3a8b-f994-8d2e-ed3d1f6bf2e3",
+			"adpath":""
+		},
+		"wooster-daily-jeff":{
+			"sitename":"Daily Jeffersonian",
+			"siteurl":"daily-jeff.com",
+			"csid":"tgtid=d26cfbcb-0535-0514-61ab-82a6f6270322",
+			"adpath":""
+		},
+		"wooster-barnesville-enterprise":{
+			"sitename":"Barnesville Enterprise",
+			"siteurl":"barnesville-enterprise.com",
+			"csid":"tgtid=37863184-cda0-7cb4-99a1-8a2fa966baa3",
+			"adpath":""
+		},
+		"wooster-newcomerstownnews":{
+			"sitename":"Newcomerstown News",
+			"siteurl":"newcomerstownnews.com",
+			"csid":"tgtid=9f12e2a3-ffd0-5284-f521-8475e4c626d3",
+			"adpath":""
+		},
+		"wooster-newconcordleader":{
+			"sitename":"New Concord Leader",
+			"siteurl":"newconcordleader.com",
+			"csid":"tgtid=d1dadc3c-2552-33c4-6d47-989cde26ce07",
+			"adpath":""
+		},
+		"wooster-ohiogo":{
+			"sitename":"Ohio Gas & Oil",
+			"siteurl":"ohiogo.com",
+			"csid":"tgtid=9a844f29-8294-2af4-a10e-46f9e5e83972",
+			"adpath":""
+		},
+		"wooster-times-gazette":{
+			"sitename":"Ashland Times Gazette",
+			"siteurl":"times-gazette.com",
+			"csid":"tgtid=b87503b8-0479-b9d4-415e-6a6f98440d6c",
+			"adpath":""
+		},
+		"wooster-theloudonvilletimes":{
+			"sitename":"Loudonville Times",
+			"siteurl":"theloudonvilletimes.com",
+			"csid":"tgtid=4e247799-964c-b244-89b9-790e9c2c84d1",
+			"adpath":""
+		}
+	};
+
+	// Fail if there is no matching entry for this siteid
+	siteentry = jsondata[siteid];
+	if (!isset(siteentry)) { return; }
+	
+	// Fail if there is no adpath nor csid
+	adpath = siteentry["adpath"];
+	csid = siteentry["csid"];
+	if (!isset(adpath) || !isset(csid)) { return; }
+
+	// If there's an ad path, define the slot for DFP
+	if (adpath != "") {
+		var adSlotCS = googletag.defineSlot(adpath, [[300,250]], 'csadspot');
+		adSlotCS.addService(googletag.pubads());
+		// Disabling 2/9/2017 to try to prevent error message -AF
+		// if (typeof rp_valuation.estimate.tier !== "undefined") {
+		// 	adSlotCS.setTargeting('rubicon', String(rp_valuation.estimate.tier));
+		// }
+		if (typeof progKeyValueMap != 'undefined' && typeof progKeyValueMap['BENN_300x250_BTF@300x250'] != 'undefined') {
+		   targeting = progKeyValueMap['BENN_300x250_BTF@300x250'].split(";");
+		   adSlotCS.setTargeting(targeting[4],targeting[5]);
+		   adSlotCS.setTargeting(targeting[0],targeting[1]);
+		   adSlotCS.setTargeting(targeting[2],targeting[3]);
+		}
+		googletag.enableServices();
+	}
+	
+}
+
+initializeWidget();
+
+</script>
+
+<meta name="civicscience:jspoll-hostname" content="www.civicscience.com"><script src="./csw-polyfills.js.download"></script></head>
+
+<body>
+
+<div id="outerwrapper">
+	<div id="cspoll" class="clear mb25">
+		<div id="cspoll-content" data-civicscience-widget="7"><div class="csw-wrapper" style="position: relative; box-sizing: border-box; display: flex; width: 100%; height: 316px; flex-wrap: nowrap;"><iframe id="csframe_7_0" name="csframe_7_0" class="csw-embed" title="CivicScience Poll" height="316px" style="width: 100%; border: none;" src="./saved_resource(3).html"></iframe></div></div>
+
+	</div>
+	<div class="adnotice">Advertisement<br></div>   
+	<div id="csadspot">
+		<script type="text/javascript">
+			if (adpath != "") {
+				$(".adnotice").css("display", "block")
+				googletag.display('csadspot');
+			}
+		</script>
+	</div>
+</div>
+
+<script type="text/javascript">
+
+console.log("BENN POLL WIDGET START");
+
+// Wait for Submit button to load, then fire init stuff. (Note: Actually loads after footer)
+$(document).on('DOMNodeInserted', function(e) {
+    var node = $(e.target);
+    if (node.hasClass("buttons")) { return; } // IE Fix
+	if (node.find("input.vote").length > 0 ||
+		node.find("input.previous").length > 0 ||
+		node.find("input.next").length > 0 ||
+        node.find("ul.answer_options").length > 0 ||
+        node.find("div.answer_results").length > 0) {
+            CSadinit();    
+   	}
+});
+
+var doc_dimensions;
+var checkheighttimeout;
+var timeoutcounter;
+
+function CSadinit() {
+	superlog("CSadinit() called");
+	clearTimeout(checkheighttimeout); // Clear any previous timeouts
+	doc_dimensions = {}; // Reset doc dimensions
+    timeoutcounter = 0;
+    startCheckHeight();
+	// Register the initial widget load
+	if (!widgetloadeventalreadyregistered) {
+		widgetloadeventalreadyregistered = true;
+		// ga('send', 'event', 'civicscience', 'load', siteid, {'nonInteraction': 1});
+		// ga('send', 'event', 'civicscience', 'adimpression', siteid, {'nonInteraction': 1});
+	} else {
+		googletag.pubads().refresh();
+		// ga('send', 'event', 'civicscience', 'adimpression', siteid, {'nonInteraction': 1});
+	}
+}
+
+function startCheckHeight() {
+    // Determine dimensions of the poll widget
+    var currentdims = {
+        width: $(".ballotbox").outerWidth(),
+        height: $("#outerwrapper").outerHeight()
+    };
+    // If height has changed since last time it was sent
+    if (doc_dimensions.height != currentdims.height) {
+        if (!widgetloadeventalreadyregistered) {
+            superlog("*** Initializing iFrame height");
+        } else {
+            superlog("*** Checking iFrame height... WRONG! FIXING!");    
+        }
+        doc_dimensions = currentdims;
+        superlog(doc_dimensions);
+        // Pass those dimensions to the parent window for dynamic resizing
+        sendDimensionsToParent(doc_dimensions);
+    }
+    timeoutcounter++;
+    superlog("*** Timeoutcounter: " + timeoutcounter);
+    if (timeoutcounter < 20) { // After 20 times, quit checking and sending
+        checkheighttimeout = setTimeout(startCheckHeight, 1000);    
+    }
+}
+
+function sendDimensionsToParent(dims) {
+    var string_to_post = JSON.stringify(dims);
+    parent.postMessage( string_to_post, "*" );
+}
+
+$(document).ready(function() {
+	
+	if (isset(csid)) {
+		// Asynchronously load Civic Science's script
+		$.getScript("https://www.civicscience.com/widget/jspoll/?elt=cspoll-content&" + csid, function() {
+			// console.log("Loading default stylesheet");
+			// loadDefaultStylesheet();
+		});
+	}
+
+	// Not currently in use
+	function loadDefaultStylesheet() {
+		$('<link rel="stylesheet" text="text/css" href="https://my.post-gazette.com/templates/all/pages/civicscience/default.css">')
+			.appendTo("body");
+	}
+});
+
+var benn_logon=false;
+function superlog(whattolog) {
+	/* if (typeof parent.benn_log !== "undefined") {
+		parent.benn_log(whattolog);
+	} else { */
+		if (benn_logon) { console.log(whattolog); }
+	/* } */
+}
+
+</script>
+
+
+</body></html>

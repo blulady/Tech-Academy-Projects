@@ -1,0 +1,2 @@
+Rollover:
+effect that causes a change to an image when a mouse hovers over it

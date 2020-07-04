@@ -1,0 +1,21 @@
+Classes: Properties vs Behaviors
+properties (structure that creates a class ie Vehicle)
+Behaviors (actions)
+Properties of Classes:
+structure that creates a class ie Vehicle
+energy source: gas vs electric
+physical form: sedan vs convertible vs pickup
+number of doors: 2 vs 4 vs 5
+mechanism of acceleration: accelerator pedal vs speed lever
+Behaviors of Classes:
+acceleration
+breaking
+steering right
+steering left
+Instantiate- an instance of a class ie:
+Vehicle 1:
+Energy source:gas
+physical form:pickup
+#of doors:2
+speed:0
+After a program has created an instance, the computer can make defined behaviors for the objects/intance

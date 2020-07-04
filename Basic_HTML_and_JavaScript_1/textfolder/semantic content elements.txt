@@ -1,0 +1,15 @@
+Semantic Content Elements
+Semantic elements are elements that have a meaning. ie:form element is a semantic element because it clearly defines what it is <content is a form>
+ie table element is a semantic element because we know the 
+content we will be dealing with will be in the form of a
+table
+
+-article
+-details
+-footer
+-headers
+-main
+-nav
+-section
+-sumary
+-time

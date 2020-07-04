@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)https://admiral.mgr.consensu.org/portal.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <script type="text/javascript">
+      (function(win, doc) {
+
+        // Based of pseudocode provided by Google
+        // https://www.chromium.org/updates/same-site/incompatible-clients
+        function shouldSendSameSiteNone(ua) {
+          return !isSameSiteNoneIncompatible(ua)
+        }
+        function isSameSiteNoneIncompatible(ua) {
+          return hasWebKitSameSiteBug(ua) || dropsUnrecognizedSameSiteCookies(ua);
+        }
+        function hasWebKitSameSiteBug(ua) {
+          return isIosVersion({ major: 12, ua: ua }) ||
+            (isMacosxVersion({ major: 10, minor: 14, ua: ua }) && (isSafari(ua) || isMacEmbeddedBrowser(ua)));
+        }
+        function dropsUnrecognizedSameSiteCookies(ua) {
+          if (isUcBrowser(ua)) {
+            return !isUcBrowserVersionAtLeast({ major: 12, minor: 13, build: 2, ua: ua})
+          }
+
+          return isChromiumBased(ua) && isChromiumVersionAtLeast({ major: 51, ua: ua }) && !isChromiumVersionAtLeast({ major: 67, ua: ua })
+        }
+        function isIosVersion(options) {
+          var regex = "\(iP.+; CPU .*OS (\d+)[_\d]*.*\) AppleWebKit\/";
+          return (options.ua.match(regex) || [])[0] === (options.major + '')
+        }
+        function isMacosxVersion(options) {
+          var regex = "\(Macintosh;.*Mac OS X (\d+)_(\d+)[_\d]*.*\) AppleWebKit\/";
+          var match = options.ua.match(regex) || [];
+          return match[0] === (options.major + '') && match[1] === (options.minor + '');
+        }
+        function isSafari(ua) {
+          var regex = "Version\/.* Safari\/";
+          return !!ua.match(regex) && !isChromiumBased(ua);
+        }
+        function isMacEmbeddedBrowser(ua) {
+          var regex = "^Mozilla\/[\.\d]+ \(Macintosh;.*Mac OS X [_\d]+\) "
+                     + "AppleWebKit\/[\.\d]+ \(KHTML, like Gecko\)$"
+          return !!ua.match(regex);
+        }
+        function isChromiumBased(ua) {
+          var regex = "Chrom(e|ium)";
+          return !!ua.match(regex);
+        }
+        function isChromiumVersionAtLeast(options) {
+          var regex = "Chrom[^ \/]+\/(\d+)[\.\d]* ";
+          var version = ++(options.ua.match(regex) || [])[0] || 0;
+          return version >= options.major;
+        }
+        function isUcBrowser(ua) {
+          var regex = "UCBrowser\/";
+          return !!ua.match(regex);
+        }
+        function isUcBrowserVersionAtLeast(options) {
+          var regex = "UCBrowser\/(\d+)\.(\d+)\.(\d+)[\.\d]* ";
+          var match = options.ua.match(regex);
+          var major = ++match[0];
+          var minor = ++match[1];
+          var build = ++match[2];
+          if (major !== options.major) {
+            return major > options.major;
+          }
+          if (minor !== options.minor) {
+            return minor > options.minor;
+          }
+          return build >= options.build;
+        }
+
+        function getVendorConsentCookie(payload) {
+          var cookie = doc.cookie.split(payload.cookieName + '=');
+          if (doc.cookie.split(payload.cookieName + '=').length === 2) {
+            return cookie[1].split(';')[0];
+          }
+        }
+
+        function writeVendorConsentCookie(payload) {
+          var cookie = payload.cookieName + '=' + payload.encodedValue + ';domain=.consensu.org;path=/;max-age=33696000';
+          if (shouldSendSameSiteNone(win.navigator.userAgent)) {
+            cookie = cookie + ';samesite=none;secure';
+          }
+          doc.cookie = cookie;
+          if (!getVendorConsentCookie()) {
+            throw 'failed to store cookie';
+          }
+        }
+
+        var commands = {
+          readVendorConsent: getVendorConsentCookie,
+          writeVendorConsent: writeVendorConsentCookie
+        };
+
+        function handleMessage(e) {
+          var vendorConsent = e.data && e.data.vendorConsent;
+          if (!vendorConsent) return;
+
+          var v1name = 'euconsent';
+          var v2name = v1name + '-v2';
+          vendorConsent.cookieName = vendorConsent.cookieName === v2name ? v2name : v1name;
+          if (vendorConsent && commands[vendorConsent.command]) {
+            try {
+              vendorConsent.result = commands[vendorConsent.command](vendorConsent);
+              e.source.postMessage({ success: true, vendorConsent: vendorConsent }, e.origin);
+            } catch (err) {
+              e.source.postMessage({ success: false, vendorConsent: vendorConsent }, e.origin);
+            }
+          }
+        }
+
+        win.addEventListener("message", handleMessage);
+        win.parent.postMessage({ success: true, vendorConsent: { command: "isLoaded"  }  }, "*");
+      })(window, document);
+    </script>
+  </head>
+  <body>
+  
+
+</body></html>

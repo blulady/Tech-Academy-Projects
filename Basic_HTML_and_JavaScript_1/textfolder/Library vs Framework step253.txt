@@ -1,0 +1,6 @@
+Library vs Framework
+library:pre-made resources/functions used by code, located in the library 
+ie:the programer would have to modify their code to call certain functions
+vs
+framework: pre-made resources but a fully functioning system that provides a complete set of generic functionality and can be modified by the programmer
+ie:a starting point for more complex web application.

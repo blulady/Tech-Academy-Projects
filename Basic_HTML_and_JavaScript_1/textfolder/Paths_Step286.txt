@@ -1,0 +1,6 @@
+Absolute & Relative Paths
+absolute
+C:\Users\User\Desktop\HTML webpage\image.png
+https://learncodinganywhere.com
+relative
+image.png (assuming the directory is the same as the webpage)

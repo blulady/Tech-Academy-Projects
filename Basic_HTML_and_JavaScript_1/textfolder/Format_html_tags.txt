@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta>
+	<link rel="stylesheet" type="text/css" 		href="name_of_file.css">
+</head>
+<body>
+	The main content for the webpage goes here
+	etc. etc...
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title> Basic HTML</title>
+		<meta character="utf-8">
+	</head>
+	<body>
+		<header>
+			<h1>The Basic HTML Template</h1>
+			<p> Introduction to basic HTML 				sytax</p>
+		</header>
+	</body>
+</html>

@@ -1,0 +1,6 @@
+Anchor tags <a>
+is an html element that creates a link to another page
+instructs the browser to display content from another document
+often includes the "href attribute" contains the name of the resource or document the page intends to link too
+
+< href="https://learncodinganywhere.com/">LINK</a>

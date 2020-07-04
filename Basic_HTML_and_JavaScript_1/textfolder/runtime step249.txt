@@ -1,0 +1,2 @@
+Runtime Environment
+is the set of computer processes related to a specific computer program ie memory allocation, access to programs variables, the passing of needed data between subprograms, interfaceing with the os
