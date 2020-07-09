@@ -49,7 +49,7 @@ body {
 /* Text over the video */ 
 .Video_Text { 
 	background: rgba(0, 0, 0, 0.5); /* This provides a semi-transparent background for the text to sit over */
-	color: white; 
+	color: black; 
 	width: 100%;
 	padding: 20px; /* This adds padding around the text so that the background goes slightly beyond the text */
 	margin-top: 23%;
@@ -96,7 +96,7 @@ body {
 /* Heading 1 elements */
 h1 {
 	text-transform: uppercase; /* We are capitalizing our headings */
-	font-family: "Trebuchet MS", Optima; 
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
 	text-align: center;
 	margin-top: 3%; /* We are adding a small margin above the headings */
 	color: #1a1a1a;
