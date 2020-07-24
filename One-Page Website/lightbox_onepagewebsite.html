@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/one_page_website.css">
+        <script src="js/javascript.js" defer></script>
+    </head>
+    <!--NAV-->
+			<div>
+				<div>
+					<ul>
+						<li>Home</li>
+						<li>Moon Photos</li>
+						<li>Moon Video</li>
+						<li>Subscribe</li>
+						<li>Footer</li>
+					</ul>
+				</div>
+			</div>
+<!--END NAV-->
+			
+<!--HOME PAGE SECTION-->
+			<div>
+				<article>
+					<header>
+						<h1 style="text-align: center;"> Moons of the Solar System</h1>
+						<p style="text-align: center;">There are over 200 moons in the Solar Sytem, but these are some of the most interesting. <p>
+					</header>
+				</article>
+			</div>	
+<!--PICTURE SECTION-->
+    <body>
+        <div class="row">
+            <div class="column">
+                <img src="images/titan.jpg" style="height:230px" onclick="openModal();currentSlide(1)"
+                    class="hover-shadow cursor">
+            </div>
+            <div class="column">
+                <img src="./images/Mimas.jpg" style="height:230px" onclick="openModal();currentSlide(2)"
+                    class="hover-shadow cursor">
+            </div>
+            <div class="column">
+                <img src="./images/io.jpg" style="height:230px" onclick="openModal();currentSlide(3)"
+                    class="hover-shadow cursor">
+            </div>
+        </div>
+        <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+                <div class="mySlides">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="images/titan.jpg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="images/Mimas.jpg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="images/io.jpg" style="width:100%">
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="images/titan.jpg" style="width:100%"
+                        onclick="currentSlide(1)" alt="phobos">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="images/Mimas.jpg" style="width:100%"
+                        onclick="currentSlide(2)" alt="mimas">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="images/io.jpg" style="width:100%"
+                        onclick="currentSlide(3)" alt="titan">
+                </div>
+            </div>
+        </div>
+        <br><br><br><br>
+        <!--VIDEO SECTION-->
+			<div>
+				<h1>Take a fantastic Voyage To The Moon</h1>
+				<!--<section>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/3tg0NG_JMPk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</section>-->
+			</div>
+<!--CONTACT FORM-->
+			<div>
+				<h1>Subscribe</h1>
+					<p>If you love learning about the moon and would like the latest updates on the Moons of the solar system. please fill out the form below!<p>
+						<form action="" method="get">
+						First Name: <input type="text"
+						name="First_Name"><br>
+						Last Name: <input type="text"
+						name="Last_Name"><br>
+							<input type="submit" value="Submit">
+						Email: <input type="text"
+						email="Email"><br>
+						</form>
+            </div>
+            <script src="js/javascript.js"></script>
+<!--FOOTER-->
+		<footer>
+			<p> Silly Productions&trade;</p>
+		</footer>
+	</body>
+</html>
+    </body>
+
+    
